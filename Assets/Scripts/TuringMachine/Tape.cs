@@ -1,11 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Tape : MonoBehaviour
 {
-    ArrayList cells = new ArrayList();
+    List<GameObject> cells = new();
     float cellWidth = 0.5f;
     Vector3 initPos;
     public GameObject cell;
@@ -40,32 +42,46 @@ public class Tape : MonoBehaviour
             }
             ((GameObject)cells[i]).transform.Find("Text").GetComponent<TextMesh>().text = c.ToString();
         }
+        for(int i = program.Length; i< cells.Count; i++)
+        {
+            ((GameObject)cells[i]).transform.Find("Text").GetComponent<TextMesh>().text = "空";
+        }
     }
-
     public void leftMove()
     {
         transform.Translate(-cellWidth, 0, 0);
     }
-
     public void rightMove()
     {
         transform.Translate(cellWidth, 0, 0);
     }
-
     //更新指定位置的内容
     public void updateAt(int index, char c)
     {
-        ((GameObject)cells[index]).transform.Find("Text").GetComponent<TextMesh>().text = c.ToString();
-        tapeWindow.transform.Find("Content/Viewport/Content").GetChild(index + 1).GetComponent<TMP_InputField>().text = c.ToString();
-    }
+        cells[index].transform.Find("Text").GetComponent<TextMesh>().text = c.ToString();
+        Transform cellTransformInWindow;
+        GameObject cellInWindow;
+        try 
+        {
+            cellTransformInWindow = tapeWindow.transform.Find("Content/Viewport/Content").GetChild(index + 1);
+            cellInWindow = cellTransformInWindow.gameObject;
 
+        } catch (Exception e)
+        {
+            GameObject cellTemp = tapeWindow.transform.Find("Content/Viewport/Content/CellTemp").gameObject;
+            cellInWindow = Instantiate(cellTemp, Vector3.zero, Quaternion.identity);
+            cellInWindow.SetActive(true);
+            cellInWindow.transform.SetParent(cellTemp.transform.parent, false);
+            cellInWindow.transform.GetChild(0).GetComponent<TMP_Text>().text = (cells.Count - 1).ToString();
+        }
+        cellInWindow.GetComponent<TMP_InputField>().text = c.ToString();
+    }
     //获取指定位置字符
     public char getCharAt(int index)
     {
         //Debug.Log(index + ":" + cells.Count);
         return ((GameObject)cells[index]).transform.Find("Text").GetComponent<TextMesh>().text[0];
     }
-
     //新增内容格
     public void addCell()
     {
@@ -73,9 +89,8 @@ public class Tape : MonoBehaviour
         GameObject newCell = Instantiate(cell, transform.position + new Vector3(cellWidth * newCellIndex, 0, 0), transform.rotation);
         newCell.transform.parent = transform;
         cells.Add(newCell);
-        ((GameObject)cells[newCellIndex]).transform.Find("Text").GetComponent<TextMesh>().text = " ";
+        cells[newCellIndex].transform.Find("Text").GetComponent<TextMesh>().text = "空";
     }
-
     public int getMaxRange()
     {
         return cells.Count - 1;
@@ -84,7 +99,6 @@ public class Tape : MonoBehaviour
     {
         initPos = transform.position;
     }
-
     public void resetM()
     {
         transform.position = initPos;

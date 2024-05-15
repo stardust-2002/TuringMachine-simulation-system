@@ -12,16 +12,25 @@ public class TuringMachine : MonoBehaviour
     public Tape tape;
     public Register register;
     public Header header;
-
-    GameObject registerWindow = null;
-    GameObject tableWindow = null;
-    GameObject tapeWindow = null;
+    public InputProcesser inputProcesser;
 
     bool isRunning = false;
     long frameNum = 0;
+    int speedFactor = 60;
     Queue<Movement> movements = new();
     string nextState = null;
-    int speedFactor = 30;
+
+    public void speedUp()
+    {
+        if (speedFactor >= 30)
+            speedFactor -= 15;
+    }
+
+    public void speedDown()
+    {
+        if (speedFactor < 90)
+            speedFactor += 15;
+    }
 
     //运行状态转换
     public void runOrStop()
@@ -32,6 +41,8 @@ public class TuringMachine : MonoBehaviour
     //重启设备
     public void resetM()
     {
+        nextState = null;
+        movements.Clear();
         init();
         tape.resetM();
         header.resetM();
@@ -41,7 +52,6 @@ public class TuringMachine : MonoBehaviour
     //根据各部件状态框内容初始化各部件
     void init()
     {
-        //todo
         tape.init();
         register.init();
         table.init();
@@ -55,31 +65,33 @@ public class TuringMachine : MonoBehaviour
     void Update()
     {
         frameNum++;
-        //每10帧进行一次更新
-        if (frameNum % speedFactor == 0 )
+        //特定帧进行一次更新
+        if (isRunning)
         {
-            if (isRunning)
+            if (frameNum % speedFactor == 0)
             {
-                if(movements.Count == 0) 
+                if (movements.Count == 0)
                 {
                     //更新状态
-                    if(nextState != null) register.updateState(nextState);
+                    if (nextState != null) register.updateState(nextState);
                     //获取当前状态与指向字符
                     string currentState = register.getState();
                     char currentChar = header.getCurrentChar();
                     //获取转移项
-                    Transfer transferLine = table.transfer(currentState, currentChar);
+                    Transfer transferLine = table.convert(currentState, currentChar);
                     if (transferLine == null)
                     {
+                        nextState = null;
                         isRunning = false;
-                        Debug.Log("停机");
+                        inputProcesser.popWindow("停机");
                         return;
                     }
-                    //添加动作到动作集合
+                    //添加动作到动作队列
                     foreach (var MM in transferLine.movements)
                     {
                         movements.Enqueue(MM);
                     }
+                    //更新下一个状态
                     nextState = transferLine.nextState;
                 }
                 //获取下一个动作并运行
@@ -101,10 +113,11 @@ public class TuringMachine : MonoBehaviour
 
                 }
             }
-            else
-            {
-                init();
-            }
+
+        }
+        else if(frameNum % 20 == 0)
+        {
+            init();
         }
     }
 }

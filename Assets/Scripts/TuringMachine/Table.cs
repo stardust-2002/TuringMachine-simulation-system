@@ -68,13 +68,13 @@ public class Table : MonoBehaviour
         }
     }
     public string startState;
-    public string[] endState;
+    public string[] endStates;
     List<Transfer> transferTable = new List<Transfer>();
 
     //转换表的初始化。
     public void init()
     {
-        Transfer[] transfers = getTransfersFromTableWindow();
+        List<Transfer> transfers = getTransfersFromTableWindow();
         tableClear();
         foreach (var transfer in transfers)
         {
@@ -82,14 +82,14 @@ public class Table : MonoBehaviour
         }
         string[] SEState = getSEState();
         startState = SEState[0];
-        endState = SEState.Skip(1).ToArray();
+        endStates = SEState.Skip(1).ToArray();
     }
-    Transfer[] getTransfersFromTableWindow()
+    List<Transfer> getTransfersFromTableWindow()
     {
         GameObject content = tableWindow.transform.Find("Content/TableMain/Viewport/Content").gameObject;
         int transfersNum = content.transform.childCount - 1;//去除temp
         Transform transferLineTransform = null;
-        Transfer[] transfers = new Transfer[transfersNum];
+        List<Transfer> transfers = new();
         for (int i = 1; i <= transfersNum; i++)
         {
             transferLineTransform = content.transform.GetChild(i);
@@ -97,7 +97,8 @@ public class Table : MonoBehaviour
             string cChar = transferLineTransform.GetChild(1).GetComponent<TMP_InputField>().text;
             string movements = transferLineTransform.GetChild(2).GetComponent<TMP_InputField>().text;
             string nState = transferLineTransform.GetChild(3).GetComponent<TMP_InputField>().text;
-            transfers[i - 1] = new Transfer(cState, cChar, movements, nState);
+            if (cState != "" && cChar != "" && movements != "" && nState != "")
+                transfers.Add(new Transfer(cState, cChar, movements, nState));
             //Debug.Log(cState+":"+cChar+ ":" + movements + ":" + nState);
         }    
         return transfers;
@@ -122,7 +123,7 @@ public class Table : MonoBehaviour
     }
 
     //根据当前状态和当前指向字符，查找转换表，返回相应转换项，若未查找到，返回null。
-    public Transfer transfer(string currentState, char currentChar)
+    public Transfer convert(string currentState, char currentChar)
     {
         foreach (var transfer in transferTable)
         {

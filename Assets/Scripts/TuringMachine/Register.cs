@@ -23,6 +23,7 @@ public class Register : MonoBehaviour
     public void setState(string state)
     {
         this.state = state;
+        transform.GetChild(0).GetComponent<TMP_Text>().text = state;
     }
 
     public void updateState(string state)
