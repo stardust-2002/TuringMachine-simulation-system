@@ -3,7 +3,11 @@
   "WorkspaceRootPath": "D:\\Data\\\u6BD5\u4E1A\u8BBE\u8BA1\\\u56FE\u7075\u673A\u865A\u62DF\u4EFF\u771F\u7CFB\u7EDF\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0D575910-D838-2BF8-3617-EA4D775F9924}|Assembly-CSharp.csproj|d:\\data\\\u6BD5\u4E1A\u8BBE\u8BA1\\\u56FE\u7075\u673A\u865A\u62DF\u4EFF\u771F\u7CFB\u7EDF\\assets\\scripts\\inputprocesser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0D575910-D838-2BF8-3617-EA4D775F9924}|Assembly-CSharp.csproj|d:\\data\\\u6BD5\u4E1A\u8BBE\u8BA1\\\u56FE\u7075\u673A\u865A\u62DF\u4EFF\u771F\u7CFB\u7EDF\\assets\\scripts\\turingmachine\\turingmachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D575910-D838-2BF8-3617-EA4D775F9924}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\turingmachine\\turingmachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D575910-D838-2BF8-3617-EA4D775F9924}|Assembly-CSharp.csproj|D:\\Data\\\u6BD5\u4E1A\u8BBE\u8BA1\\\u56FE\u7075\u673A\u865A\u62DF\u4EFF\u771F\u7CFB\u7EDF\\assets\\scripts\\inputprocesser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0D575910-D838-2BF8-3617-EA4D775F9924}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inputprocesser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -15,16 +19,16 @@
       "RelativeMoniker": "D:0:0:{0D575910-D838-2BF8-3617-EA4D775F9924}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\turingmachine\\header.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0D575910-D838-2BF8-3617-EA4D775F9924}|Assembly-CSharp.csproj|D:\\Data\\\u6BD5\u4E1A\u8BBE\u8BA1\\\u56FE\u7075\u673A\u865A\u62DF\u4EFF\u771F\u7CFB\u7EDF\\assets\\scripts\\turingmachine\\turingmachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D575910-D838-2BF8-3617-EA4D775F9924}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\turingmachine\\turingmachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0D575910-D838-2BF8-3617-EA4D775F9924}|Assembly-CSharp.csproj|D:\\Data\\\u6BD5\u4E1A\u8BBE\u8BA1\\\u56FE\u7075\u673A\u865A\u62DF\u4EFF\u771F\u7CFB\u7EDF\\assets\\scripts\\turingmachine\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0D575910-D838-2BF8-3617-EA4D775F9924}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\turingmachine\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0D575910-D838-2BF8-3617-EA4D775F9924}|Assembly-CSharp.csproj|D:\\Data\\\u6BD5\u4E1A\u8BBE\u8BA1\\\u56FE\u7075\u673A\u865A\u62DF\u4EFF\u771F\u7CFB\u7EDF\\assets\\scripts\\turingmachine\\table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0D575910-D838-2BF8-3617-EA4D775F9924}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\turingmachine\\table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Data\\\u6BD5\u4E1A\u8BBE\u8BA1\\\u56FE\u7075\u673A\u865A\u62DF\u4EFF\u771F\u7CFB\u7EDF\\classdiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:classdiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,17 +38,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
+              "Title": "ClassDiagram1.cd",
+              "DocumentMoniker": "D:\\Data\\\u6BD5\u4E1A\u8BBE\u8BA1\\\u56FE\u7075\u673A\u865A\u62DF\u4EFF\u771F\u7CFB\u7EDF\\ClassDiagram1.cd",
+              "RelativeDocumentMoniker": "ClassDiagram1.cd",
+              "ToolTip": "D:\\Data\\\u6BD5\u4E1A\u8BBE\u8BA1\\\u56FE\u7075\u673A\u865A\u62DF\u4EFF\u771F\u7CFB\u7EDF\\ClassDiagram1.cd",
+              "RelativeToolTip": "ClassDiagram1.cd",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000463|",
+              "WhenOpened": "2024-05-16T10:19:55.682Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "TuringMachine.cs",
               "DocumentMoniker": "D:\\Data\\\u6BD5\u4E1A\u8BBE\u8BA1\\\u56FE\u7075\u673A\u865A\u62DF\u4EFF\u771F\u7CFB\u7EDF\\Assets\\Scripts\\TuringMachine\\TuringMachine.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TuringMachine\\TuringMachine.cs",
               "ToolTip": "D:\\Data\\\u6BD5\u4E1A\u8BBE\u8BA1\\\u56FE\u7075\u673A\u865A\u62DF\u4EFF\u771F\u7CFB\u7EDF\\Assets\\Scripts\\TuringMachine\\TuringMachine.cs",
               "RelativeToolTip": "Assets\\Scripts\\TuringMachine\\TuringMachine.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAcwCwAAAAaAAAA",
+              "ViewState": "AQIAAEMAAAAAAAAAAAAzwFAAAABVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-22T07:09:50.855Z",
               "EditorCaption": ""
@@ -75,7 +90,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Tape.cs",
               "DocumentMoniker": "D:\\Data\\\u6BD5\u4E1A\u8BBE\u8BA1\\\u56FE\u7075\u673A\u865A\u62DF\u4EFF\u771F\u7CFB\u7EDF\\Assets\\Scripts\\TuringMachine\\Tape.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TuringMachine\\Tape.cs",
@@ -83,12 +98,11 @@
               "RelativeToolTip": "Assets\\Scripts\\TuringMachine\\Tape.cs",
               "ViewState": "AQIAADoAAAAAAAAAAAA1wEoAAABsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T10:14:43.537Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-19T10:14:43.537Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Header.cs",
               "DocumentMoniker": "D:\\Data\\\u6BD5\u4E1A\u8BBE\u8BA1\\\u56FE\u7075\u673A\u865A\u62DF\u4EFF\u771F\u7CFB\u7EDF\\Assets\\Scripts\\TuringMachine\\Header.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TuringMachine\\Header.cs",
@@ -96,21 +110,19 @@
               "RelativeToolTip": "Assets\\Scripts\\TuringMachine\\Header.cs",
               "ViewState": "AQIAACQAAAAAAAAAAAAswDwAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T10:01:18.897Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-19T10:01:18.897Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "InputProcesser.cs",
               "DocumentMoniker": "D:\\Data\\\u6BD5\u4E1A\u8BBE\u8BA1\\\u56FE\u7075\u673A\u865A\u62DF\u4EFF\u771F\u7CFB\u7EDF\\Assets\\Scripts\\InputProcesser.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\InputProcesser.cs",
               "ToolTip": "D:\\Data\\\u6BD5\u4E1A\u8BBE\u8BA1\\\u56FE\u7075\u673A\u865A\u62DF\u4EFF\u771F\u7CFB\u7EDF\\Assets\\Scripts\\InputProcesser.cs",
               "RelativeToolTip": "Assets\\Scripts\\InputProcesser.cs",
-              "ViewState": "AQIAAHwAAAAAAAAAAAAAAK4AAAAoAAAA",
+              "ViewState": "AQIAAOwAAAAAAAAAAAAcwPsAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T08:20:26.306Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-16T06:54:09.669Z"
             }
           ]
         }

@@ -104,6 +104,9 @@ ScriptsOnlyBuild:
     methodName: close
   - assembly: Assembly-CSharp
     fullTypeName: InputProcesser
+    methodName: binaryAddition
+  - assembly: Assembly-CSharp
+    fullTypeName: InputProcesser
     methodName: defaultMode
   - assembly: Assembly-CSharp
     fullTypeName: InputProcesser
@@ -114,6 +117,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: InputProcesser
     methodName: tapeStateWindow
+  - assembly: Assembly-CSharp
+    fullTypeName: InputProcesser
+    methodName: UTM
   - assembly: Assembly-CSharp
     fullTypeName: InputProcesser
     methodName: programInputResize
@@ -1150,7 +1156,7 @@ ScriptsOnlyBuild:
     className: UnityOnMoveMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 0dd763c99bceb573b4a7864a8d9ad3df
+      Hash: c190bf21f1013935ead38755d0f60699
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Header
@@ -1283,4 +1289,4 @@ ScriptsOnlyBuild:
   platform: 20
   scenePathNames:
   - Assets/Scenes/scence-main.unity
-  playerPath: "D:/Data/\u6BD5\u4E1A\u8BBE\u8BA1/\u56FE\u7075\u673A\u4EFF\u771F\u7CFB\u7EDF-webgl"
+  playerPath: "D:/Data/\u6BD5\u4E1A\u8BBE\u8BA1/\u56FE\u7075\u673A\u4EFF\u771F\u7CFB\u7EDF-WebGL"

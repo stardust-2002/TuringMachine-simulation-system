@@ -6568,8 +6568,10 @@ struct Header_t9BD3F2E1FC09047949839C347DC6169851B7F526  : public MonoBehaviour_
 {
 	// Tape Header::tape
 	Tape_tF2E792F8311571FFD8BAFCD8177FDD24E105EFAB* ___tape_4;
+	// UnityEngine.GameObject Header::headerIndexInWindow
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___headerIndexInWindow_5;
 	// System.Int32 Header::position
-	int32_t ___position_5;
+	int32_t ___position_6;
 };
 
 // InputProcesser
@@ -7475,9 +7477,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3199[9] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3200[13] = 
 {
 	static_cast<int32_t>(offsetof(InputProcesser_t7421C44D98287A621FBE9876DD8A46690D5655DC, ___canvas_4)),static_cast<int32_t>(offsetof(InputProcesser_t7421C44D98287A621FBE9876DD8A46690D5655DC, ___programInputResizeButton_5)),static_cast<int32_t>(offsetof(InputProcesser_t7421C44D98287A621FBE9876DD8A46690D5655DC, ___programInputHelpButton_6)),static_cast<int32_t>(offsetof(InputProcesser_t7421C44D98287A621FBE9876DD8A46690D5655DC, ___programInputBox_7)),static_cast<int32_t>(offsetof(InputProcesser_t7421C44D98287A621FBE9876DD8A46690D5655DC, ___turingMachine_8)),static_cast<int32_t>(offsetof(InputProcesser_t7421C44D98287A621FBE9876DD8A46690D5655DC, ___defaultModeButton_9)),static_cast<int32_t>(offsetof(InputProcesser_t7421C44D98287A621FBE9876DD8A46690D5655DC, ___freeModeButton_10)),static_cast<int32_t>(offsetof(InputProcesser_t7421C44D98287A621FBE9876DD8A46690D5655DC, ___programInputActiveStatus_11)),static_cast<int32_t>(offsetof(InputProcesser_t7421C44D98287A621FBE9876DD8A46690D5655DC, ___programInputHelpWindow_12)),static_cast<int32_t>(offsetof(InputProcesser_t7421C44D98287A621FBE9876DD8A46690D5655DC, ___registerWindow_13)),static_cast<int32_t>(offsetof(InputProcesser_t7421C44D98287A621FBE9876DD8A46690D5655DC, ___tableWindow_14)),static_cast<int32_t>(offsetof(InputProcesser_t7421C44D98287A621FBE9876DD8A46690D5655DC, ___tapeWindow_15)),static_cast<int32_t>(offsetof(InputProcesser_t7421C44D98287A621FBE9876DD8A46690D5655DC, ___infoWindow_16)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3203[2] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3203[3] = 
 {
-	static_cast<int32_t>(offsetof(Header_t9BD3F2E1FC09047949839C347DC6169851B7F526, ___tape_4)),static_cast<int32_t>(offsetof(Header_t9BD3F2E1FC09047949839C347DC6169851B7F526, ___position_5)),};
+	static_cast<int32_t>(offsetof(Header_t9BD3F2E1FC09047949839C347DC6169851B7F526, ___tape_4)),static_cast<int32_t>(offsetof(Header_t9BD3F2E1FC09047949839C347DC6169851B7F526, ___headerIndexInWindow_5)),static_cast<int32_t>(offsetof(Header_t9BD3F2E1FC09047949839C347DC6169851B7F526, ___position_6)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3204[2] = 
 {
 	static_cast<int32_t>(offsetof(Register_t3C6AE6B8E71C5B8C1E9EEF7512A1C1C18A00505C, ___state_4)),static_cast<int32_t>(offsetof(Register_t3C6AE6B8E71C5B8C1E9EEF7512A1C1C18A00505C, ___registerWindow_5)),};

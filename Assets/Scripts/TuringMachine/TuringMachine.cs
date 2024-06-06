@@ -65,9 +65,9 @@ public class TuringMachine : MonoBehaviour
     void Update()
     {
         frameNum++;
-        //特定帧进行一次更新
         if (isRunning)
         {
+            //特定帧进行一次更新
             if (frameNum % speedFactor == 0)
             {
                 if (movements.Count == 0)

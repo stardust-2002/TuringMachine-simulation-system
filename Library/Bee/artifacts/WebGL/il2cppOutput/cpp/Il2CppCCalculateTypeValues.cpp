@@ -46189,8 +46189,10 @@ struct Header_t9BD3F2E1FC09047949839C347DC6169851B7F526  : public MonoBehaviour_
 {
 	// Tape Header::tape
 	Tape_tF2E792F8311571FFD8BAFCD8177FDD24E105EFAB* ___tape_4;
+	// UnityEngine.GameObject Header::headerIndexInWindow
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___headerIndexInWindow_5;
 	// System.Int32 Header::position
-	int32_t ___position_5;
+	int32_t ___position_6;
 };
 
 // InputProcesser

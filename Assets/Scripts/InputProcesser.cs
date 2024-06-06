@@ -249,7 +249,7 @@ public class InputProcesser : MonoBehaviour
             }
         }
     }
-    // 使用 EditorUtility 的代码块
+    
     private List<GameObject> FindObjects(string tag)
     {
         List<GameObject> gameObjects = new List<GameObject>();
